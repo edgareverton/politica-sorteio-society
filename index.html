@@ -1,70 +1,97 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Política de Privacidade — Sorteio Society</title>
+<meta name="description" content="Política de privacidade do app Sorteio Society: nada é coletado, nada sai do aparelho, nenhuma permissão é pedida.">
 <style>
   :root {
-    --fundo: #ffffff;
-    --texto: #1e293b;
-    --suave: #64748b;
-    --borda: #e2e8f0;
-    --destaque: #059669;
+    --ink: #1e293b;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --green: #047857;
+    --bg: #ffffff;
+    --destaque: #f8fafc;
   }
+
   @media (prefers-color-scheme: dark) {
     :root {
-      --fundo: #0f172a;
-      --texto: #e2e8f0;
-      --suave: #94a3b8;
-      --borda: #1e293b;
-      --destaque: #34d399;
+      --ink: #e2e8f0;
+      --muted: #94a3b8;
+      --line: #334155;
+      --green: #34d399;
+      --bg: #0f172a;
+      --destaque: #1e293b;
     }
   }
+
   * { box-sizing: border-box; }
+
   body {
     margin: 0;
     padding: 32px 20px 64px;
-    background: var(--fundo);
-    color: var(--texto);
-    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
   }
+
   main { max-width: 680px; margin: 0 auto; }
+
   h1 {
-    font-size: 1.7rem;
+    font-size: 27px;
     line-height: 1.25;
-    margin: 0 0 8px;
+    margin: 0 0 6px;
   }
+
+  .data {
+    color: var(--muted);
+    font-size: 15px;
+    margin: 0 0 32px;
+  }
+
   h2 {
-    font-size: 1.15rem;
+    font-size: 19px;
     margin: 36px 0 10px;
     padding-top: 20px;
-    border-top: 1px solid var(--borda);
+    border-top: 1px solid var(--line);
   }
-  .data { color: var(--suave); font-size: .9rem; margin: 0 0 8px; }
-  .resumo {
-    margin: 24px 0 0;
-    padding: 16px 18px;
-    border-left: 3px solid var(--destaque);
-    background: color-mix(in srgb, var(--destaque) 8%, transparent);
-    border-radius: 0 8px 8px 0;
-  }
-  strong { color: var(--texto); }
+
+  h2:first-of-type { border-top: 0; padding-top: 0; }
+
+  p, li { margin: 12px 0; }
+  ul { padding-left: 22px; }
+
+  strong { color: var(--ink); }
+
   code {
-    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
-    font-size: .85em;
-    background: var(--borda);
-    padding: 2px 6px;
+    background: var(--destaque);
+    border: 1px solid var(--line);
     border-radius: 4px;
-    word-break: break-all;
+    padding: 1px 5px;
+    font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+    font-size: 14px;
+    word-break: break-word;
   }
-  a { color: var(--destaque); }
+
+  .resumo {
+    background: var(--destaque);
+    border-left: 3px solid var(--green);
+    border-radius: 0 6px 6px 0;
+    padding: 14px 18px;
+    margin: 0 0 8px;
+  }
+
+  .resumo p { margin: 0; }
+
+  a { color: var(--green); }
+
   footer {
     margin-top: 48px;
     padding-top: 20px;
-    border-top: 1px solid var(--borda);
-    color: var(--suave);
-    font-size: .875rem;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 15px;
   }
 </style>
 </head>
@@ -72,81 +99,100 @@
 <main>
 
   <h1>Política de Privacidade — Sorteio Society</h1>
-  <p class="data">Última atualização: 31 de agosto de 2026</p>
+  <p class="data">Última atualização: 11 de setembro de 2026</p>
 
-  <p class="resumo">
-    O Sorteio Society <strong>não coleta, não transmite e não compartilha nenhum dado pessoal</strong>.
-  </p>
+  <h2>Resumo</h2>
+  <div class="resumo">
+    <p>O Sorteio Society <strong>não coleta, não transmite e não compartilha nenhum
+    dado pessoal</strong>.</p>
+  </div>
 
   <h2>Que dados o app guarda</h2>
-  <p>
-    O app guarda apenas o que você digita para organizar a pelada: nomes de jogadores,
-    se cada um é mensalista ou diarista, a posição (linha ou goleiro), os times formados
-    e o histórico dos jogos da rodada.
-  </p>
-  <p>
-    Esses dados ficam <strong>exclusivamente no armazenamento interno do seu aparelho</strong>.
-    Eles não são enviados para nenhum servidor, nem para os desenvolvedores, nem para terceiros.
-  </p>
+  <p>O app guarda apenas o que você digita para organizar a pelada e o campeonato:
+  nomes de jogadores, se cada um é mensalista ou diarista, a posição (linha ou
+  goleiro), os times formados, o histórico dos jogos da rodada, e — no campeonato —
+  os times, o elenco de cada um, os placares, os gols e as assistências.</p>
+
+  <p>Esses dados ficam <strong>exclusivamente no armazenamento interno do seu
+  aparelho</strong>. Eles não são enviados para nenhum servidor, nem para os
+  desenvolvedores, nem para terceiros.</p>
+
+  <h2>Escudo do time</h2>
+  <p>Ao escolher um escudo para um time do campeonato, o app abre o <strong>seletor de
+  fotos do próprio Android</strong>. O sistema entrega ao app apenas a imagem que você
+  escolheu — o app não enxerga o resto da sua galeria e não pede permissão de acesso a
+  fotos.</p>
+
+  <p>A imagem escolhida é reduzida e <strong>copiada para a pasta privada do app</strong>,
+  no seu aparelho. Ela não é enviada para lugar nenhum e é apagada junto com o time, ou
+  quando você troca o escudo.</p>
+
+  <h2>Quando você compartilha ou exporta</h2>
+  <p>Duas ações do app entregam conteúdo a outro aplicativo, e <strong>as duas partem de
+  você</strong>:</p>
+
+  <ul>
+    <li><strong>Compartilhar</strong> a classificação, a artilharia, as assistências ou
+    os placares gera uma imagem e abre o menu de compartilhamento do Android. Quem recebe
+    é o app que você escolher ali (WhatsApp, e-mail, o que for). O Sorteio Society não
+    escolhe destino nem envia nada sozinho.</li>
+    <li><strong>Exportar</strong> o campeonato grava um arquivo no lugar que você
+    indicar, pelo seletor de arquivos do Android.</li>
+  </ul>
+
+  <p>Em nenhum dos dois casos o app envia dados por conta própria, e em nenhum deles ele
+  tem acesso ao resto dos seus arquivos.</p>
 
   <h2>Backup e troca de aparelho</h2>
-  <p>
-    O backup automático do Android está <strong>desligado</strong> neste app. Os seus dados
-    não vão para o backup do Google (Google Drive) nem são copiados na transferência para um
-    aparelho novo — mesmo que o backup esteja ligado nas configurações do seu celular.
-  </p>
-  <p>
-    Na prática: ao trocar de celular ou reinstalar o app, o elenco precisa ser cadastrado
-    de novo. É o preço de os dados nunca saírem do aparelho.
-  </p>
+  <p>O backup automático do Android está <strong>desligado</strong> neste app. Os seus
+  dados não vão para o backup do Google (Google Drive) nem são copiados na transferência
+  para um aparelho novo — mesmo que o backup esteja ligado nas configurações do seu
+  celular.</p>
+
+  <p>Para o campeonato existe o <strong>Exportar/Importar</strong> descrito acima: você
+  guarda o arquivo onde quiser e o traz de volta no aparelho novo. O elenco do sorteio da
+  semana não tem exportação e precisa ser cadastrado de novo.</p>
 
   <h2>Acesso à internet</h2>
-  <p>
-    O app <strong>não pede a permissão de internet</strong>. Tecnicamente, ele não tem como
-    enviar nada para lugar nenhum.
-  </p>
+  <p>O app <strong>não pede a permissão de internet</strong>. Tecnicamente, ele não tem
+  como enviar nada para lugar nenhum.</p>
 
   <h2>Permissões</h2>
-  <p>
-    O Sorteio Society <strong>não solicita nenhuma permissão de acesso</strong>. Ele não acessa
-    contatos, câmera, localização, arquivos, microfone, nem qualquer outro recurso ou dado do aparelho.
-  </p>
-  <p>
-    Se você consultar a lista técnica de permissões do app, vai encontrar uma única entrada:
-    <code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>. Ela é criada pelo próprio app e
-    adicionada automaticamente pelas bibliotecas do Android. A função dela é impedir que outros
-    aplicativos se comuniquem com componentes internos do Sorteio Society — ou seja, é uma
-    proteção, e não um acesso a nada seu.
-  </p>
+  <p>O Sorteio Society <strong>não solicita nenhuma permissão de acesso</strong>. Ele não
+  acessa contatos, câmera, localização, microfone, nem a sua galeria de fotos ou seus
+  arquivos. O escudo e a exportação passam pelos seletores do próprio Android, que
+  entregam ao app somente o item escolhido por você — e é justamente por isso que nenhuma
+  permissão é necessária.</p>
+
+  <p>Se você consultar a lista técnica de permissões do app, vai encontrar uma única
+  entrada: <code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>. Ela é criada pelo
+  próprio app e adicionada automaticamente pelas bibliotecas do Android. A função dela é
+  impedir que outros aplicativos se comuniquem com componentes internos do Sorteio
+  Society — ou seja, é uma proteção, e não um acesso a nada seu.</p>
 
   <h2>Anúncios e análise de uso</h2>
-  <p>
-    O app <strong>não exibe anúncios</strong> e <strong>não usa nenhuma ferramenta de análise
-    de uso ou rastreamento</strong>.
-  </p>
+  <p>O app <strong>não exibe anúncios</strong> e <strong>não usa nenhuma ferramenta de
+  análise de uso ou rastreamento</strong>.</p>
 
   <h2>Crianças</h2>
   <p>O app não coleta dados de ninguém, de qualquer idade.</p>
 
   <h2>Como apagar seus dados</h2>
-  <p>
-    Os dados somem quando você desinstala o app, ou pelas configurações do Android em
-    <strong>Apps → Sorteio Society → Armazenamento → Limpar dados</strong>.
-  </p>
+  <p>Os dados somem quando você desinstala o app, ou pelas configurações do Android em
+  <strong>Apps → Sorteio Society → Armazenamento → Limpar dados</strong>. Isso apaga
+  também os escudos copiados para a pasta do app.</p>
 
   <h2>Contato</h2>
-  <p>
-    Dúvidas sobre esta política:
-    <a href="mailto:edgarevertonaraujo@gmail.com">edgarevertonaraujo@gmail.com</a>
-  </p>
+  <p>Dúvidas sobre esta política:
+  <a href="mailto:edgarevertonaraujo@gmail.com">edgarevertonaraujo@gmail.com</a></p>
 
   <h2>Mudanças</h2>
-  <p>
-    Se esta política mudar, a data no topo será atualizada e a nova versão publicada
-    neste mesmo endereço.
-  </p>
+  <p>Se esta política mudar, a data no topo será atualizada e a nova versão publicada
+  neste mesmo endereço.</p>
 
-  <footer>Sorteio Society — app para organizar a pelada.</footer>
+  <footer>
+    Sorteio Society — app para organizar a pelada
+  </footer>
 
 </main>
 </body>
