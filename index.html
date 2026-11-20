@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Política de Privacidade | Sorteio Society</title>
-<meta name="description" content="Política de privacidade do app Sorteio Society: nada é coletado, o pagamento acontece dentro da Google Play, e os dados só saem do aparelho quando você manda.">
+<meta name="description" content="Política de privacidade do app Sorteio Society: o app não coleta nada, o pagamento acontece dentro da Google Play, e a cópia na nuvem do plano pago é opcional e fica na sua conta Google.">
 <style>
   :root {
     --ink: #1e293b;
@@ -99,14 +99,18 @@
 <main>
 
   <h1>Política de Privacidade do Sorteio Society</h1>
-  <p class="data">Última atualização: 24 de setembro de 2026</p>
+  <p class="data">Última atualização: 20 de novembro de 2026</p>
 
   <h2>Resumo</h2>
   <div class="resumo">
-    <p>O Sorteio Society <strong>não coleta, não transmite e não compartilha nenhum
-    dado pessoal</strong>. Tudo o que você digita fica no seu aparelho, e só sai dele
-    quando <strong>você</strong> manda. E, mesmo aí, quem envia é outro aplicativo que
-    você escolhe na hora.</p>
+    <p>Do jeito que vem instalado, o Sorteio Society <strong>não coleta, não transmite e
+    não compartilha nenhum dado pessoal</strong>. Tudo o que você digita fica no seu
+    aparelho, e só sai dele quando <strong>você</strong> manda.</p>
+
+    <p>A exceção é uma escolha sua: quem tem o plano pago pode <strong>entrar com a conta
+    Google e guardar uma cópia dos dados na nuvem</strong>. Aí, e só aí, os dados da
+    pelada e o seu e-mail vão para um servidor, guardados na sua conta, que só você
+    acessa. Veja a seção <a href="#nuvem">Cópia na nuvem</a>.</p>
 
     <p>O app tem uma parte paga, e aí ele fala com a Play Store, só para saber se o
     plano está ativo e para abrir a tela de pagamento do Google. O pagamento inteiro
@@ -136,9 +140,9 @@
   continua ali mesmo que a pessoa saia da pelada depois. É o que faz o extrato de um mês
   passado continuar correto.</p>
 
-  <p>Esses dados ficam <strong>exclusivamente no armazenamento interno do seu
-  aparelho</strong>. Eles não são enviados para nenhum servidor, nem para os
-  desenvolvedores, nem para terceiros.</p>
+  <p>Esses dados ficam <strong>no armazenamento interno do seu aparelho</strong>. Eles
+  só saem dele pelos caminhos descritos abaixo, todos escolhidos por você. Nunca são
+  vendidos nem repassados a terceiros.</p>
 
   <h2>Escudo do time</h2>
   <p>Ao escolher um escudo para um time do campeonato, o app abre o <strong>seletor de
@@ -147,13 +151,13 @@
   fotos.</p>
 
   <p>A imagem escolhida é reduzida e <strong>copiada para a pasta privada do app</strong>,
-  no seu aparelho. Ela não é enviada para lugar nenhum e é apagada junto com o time, ou
-  quando você troca o escudo.</p>
+  no seu aparelho. Ela só sai dali dentro da cópia de segurança, se você usar uma, e é
+  apagada junto com o time, ou quando você troca o escudo.</p>
 
   <h2>Quando o conteúdo sai do app</h2>
-  <p>Existem quatro caminhos, e <strong>três deles partem de um toque seu, na
-  hora</strong>. O quarto é a cópia automática, que você liga uma vez. Ela está descrita na
-  seção seguinte.</p>
+  <p>Existem cinco caminhos, e <strong>três deles partem de um toque seu, na
+  hora</strong>. Os outros dois, a cópia automática numa pasta e a cópia na nuvem, você
+  liga uma vez. Eles estão descritos nas seções seguintes.</p>
 
   <ul>
     <li><strong>Compartilhar</strong> a classificação, a artilharia, as assistências, os
@@ -181,8 +185,8 @@
   <p>O arquivo de cópia contém <strong>tudo</strong>: nomes, valores, pagamentos e os
   escudos dos times. Trate-o como você trataria uma planilha de caixa.</p>
 
-  <p>Em nenhum desses casos o app envia algo por conta própria, e em nenhum deles ele tem
-  acesso ao resto dos seus arquivos.</p>
+  <p>Em nenhum desses três casos o app envia algo por conta própria, e em nenhum deles ele
+  tem acesso ao resto dos seus arquivos.</p>
 
   <h2>Cópia de segurança automática</h2>
   <p>O app pode gravar a cópia sozinho, e esta é a única situação em que ele escreve
@@ -206,22 +210,53 @@
   <strong>fora</strong> do Sorteio Society, sob as regras do aplicativo que você usou, e o
   Sorteio Society não participa nem sabe disso.</p>
 
+  <h2 id="nuvem">Cópia na nuvem (plano pago)</h2>
+  <p>Quem tem o plano pago pode guardar os dados na nuvem, na própria conta Google. É
+  opcional: <strong>vem desligada</strong>, e só passa a existir quando você toca em
+  <strong>Backup → Entrar com o Google</strong>. Sem isso, nada do que está nesta seção
+  acontece.</p>
+
+  <p>Ao entrar:</p>
+  <ul>
+    <li>o login é feito pelo Google, e o app <strong>nunca vê a sua senha</strong>. O
+    serviço de login (Firebase Authentication, do Google) registra um identificador da
+    sua conta, o seu <strong>e-mail</strong>, o seu <strong>nome</strong> e a foto do
+    perfil Google. O app usa o identificador para separar os seus dados dos de outras
+    pessoas, e o e-mail para mostrar em qual conta você está;</li>
+    <li>a partir daí, o app envia <strong>uma cópia de todos os dados</strong> descritos
+    acima (elenco, campeonatos com os escudos, e o financeiro, com nomes e valores)
+    quando sai da frente e algo mudou;</li>
+    <li>a cópia fica no <strong>Cloud Firestore</strong>, o banco de dados do Firebase, do
+    Google, em servidores no Brasil (São Paulo). A conexão é criptografada, e as regras
+    do banco deixam cada conta ler e gravar <strong>apenas os próprios dados</strong>.
+    Outros usuários não têm acesso a eles. O Google guarda os dados em nome do app, sob
+    os termos dele para o Firebase;</li>
+    <li>os dados servem só para devolver a cópia a você, num aparelho novo ou depois de
+    reinstalar. Não há anúncio, análise de uso nem venda de dados.</li>
+  </ul>
+
+  <p><strong>Sair da conta</strong>, na mesma tela, interrompe os envios, e o que já está
+  na nuvem continua lá. <strong>Se o plano acabar</strong>, os envios param e a cópia fica
+  guardada, para voltar se você assinar de novo. Para apagar de vez, veja
+  <a href="#apagar">Como apagar seus dados</a>.</p>
+
   <h2>Backup do Google e troca de aparelho</h2>
   <p>O backup automático do Android está <strong>desligado</strong> neste app. Os seus
   dados não vão para o backup do Google (Google Drive) nem são copiados na transferência
   para um aparelho novo, mesmo que o backup esteja ligado nas configurações do seu
   celular.</p>
 
-  <p>É justamente por isso que o app tem a cópia descrita acima: ela é a única forma de
-  levar os dados para outro celular, e o arquivo fica sempre sob o seu controle.</p>
+  <p>É justamente por isso que o app tem as cópias descritas acima: o arquivo, que fica
+  sempre sob o seu controle, e, no plano pago, a cópia na nuvem, que volta quando você
+  entra com a mesma conta Google no aparelho novo.</p>
 
   <h2>O plano pago</h2>
-  <p>O financeiro (caixa, mensalidades, diárias e vaquinhas) e a cópia de segurança
-  fazem parte de um plano pago, por assinatura mensal ou por uma compra única. O resto do
+  <p>O financeiro (caixa, mensalidades, diárias e vaquinhas) e a cópia de segurança,
+  em arquivo e na nuvem, fazem parte de um plano pago, por assinatura mensal ou por uma compra única. O resto do
   app é gratuito.</p>
 
-  <p><strong>O pagamento inteiro acontece dentro da Google Play.</strong> O Sorteio
-  Society nunca vê nem guarda o seu cartão, o seu CPF, o seu nome ou o seu e-mail. O app
+  <p><strong>O pagamento inteiro acontece dentro da Google Play.</strong> Na compra, o
+  Sorteio Society nunca vê nem guarda o seu cartão, o seu CPF, o seu nome ou o seu e-mail. O app
   pergunta à Play Store apenas uma coisa: <em>“este aparelho tem o plano ativo?”</em>
   E guarda a resposta (sim ou não, e a data em que perguntou) num arquivo local, para
   continuar funcionando sem rede.</p>
@@ -231,15 +266,17 @@
   assinatura ou pedir reembolso, use a própria Play Store.</p>
 
   <h2>Acesso à internet</h2>
-  <p>O app usa a internet <strong>para uma coisa só</strong>: perguntar à Play Store se o
-  plano está ativo e abrir a tela de pagamento do Google quando você pede. Quem sai para a
-  rede, na verdade, é o aplicativo da Play Store; o Sorteio Society conversa com ele ali
-  no próprio aparelho.</p>
+  <p>O app usa a internet para duas coisas:</p>
+  <ul>
+    <li><strong>falar com a Play Store</strong>, para saber se o plano está ativo e abrir
+    a tela de pagamento do Google quando você pede. Nada da sua pelada vai nessa
+    conversa;</li>
+    <li><strong>a cópia na nuvem</strong>, e só se você entrou com a conta Google nela:
+    para fazer o login e para enviar ou trazer a cópia.</li>
+  </ul>
 
-  <p><strong>Nenhum dado seu da pelada sai do celular por essa conexão.</strong> Elenco,
-  caixa, mensalidades e campeonatos não são enviados para lugar nenhum. Não há servidor
-  do app, e nada do que você digita é transmitido. Quando a cópia de segurança chega à
-  nuvem, quem a levou foi outro aplicativo, a seu pedido.</p>
+  <p>Fora da cópia na nuvem, <strong>nenhum dado seu da pelada sai do celular pela
+  internet</strong>. Não há anúncio, rastreamento nem envio escondido.</p>
 
   <h2>Permissões</h2>
   <p>O Sorteio Society <strong>não pede nenhuma permissão de acesso aos seus dados</strong>.
@@ -252,12 +289,15 @@
   entradas:</p>
 
   <ul>
-    <li><code>INTERNET</code> e <code>ACCESS_NETWORK_STATE</code>: exigidas pela
-    biblioteca de pagamentos do Google para falar com a Play Store. São permissões que o
-    Android classifica como normais: ele não pergunta nada a você, porque elas não dão
-    acesso a nenhum dado pessoal.</li>
+    <li><code>INTERNET</code> e <code>ACCESS_NETWORK_STATE</code>: para falar com a Play
+    Store e, se você usar, com a cópia na nuvem. São permissões que o Android classifica
+    como normais: ele não pergunta nada a você, porque elas não dão acesso a nenhum dado
+    pessoal.</li>
     <li><code>com.android.vending.BILLING</code>: o direito de oferecer a compra dentro
     do app.</li>
+    <li><code>READ_GSERVICES</code>: adicionada pelas bibliotecas do Google (Firebase) e
+    usada por elas para ler configurações dos serviços do Google Play no aparelho. Não dá
+    acesso a nenhum dado seu.</li>
     <li><code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>: criada pelo próprio app e
     adicionada automaticamente pelas bibliotecas do Android. A função dela é impedir que
     outros aplicativos se comuniquem com componentes internos do Sorteio Society. Ou
@@ -269,9 +309,10 @@
   análise de uso ou rastreamento</strong>.</p>
 
   <h2>Crianças</h2>
-  <p>O app não coleta dados de ninguém, de qualquer idade.</p>
+  <p>O app não é voltado para crianças. Fora da cópia na nuvem, que exige o plano pago e
+  uma conta Google, ele não coleta dados de ninguém, de qualquer idade.</p>
 
-  <h2>Como apagar seus dados</h2>
+  <h2 id="apagar">Como apagar seus dados</h2>
   <p>Os dados de dentro do app somem quando você o desinstala, ou pelas configurações do
   Android em <strong>Apps → Sorteio Society → Armazenamento → Limpar dados</strong>. Isso
   apaga também os escudos copiados para a pasta do app.</p>
@@ -281,6 +322,15 @@
   existem. Para se desfazer delas, apague os arquivos
   <code>sorteio-society-*.json</code> pelo gerenciador de arquivos do celular, e também
   no serviço de nuvem, se você tiver mandado o arquivo para lá.</p>
+
+  <p><strong>A cópia na nuvem e a conta de login</strong> se apagam pelo próprio app, em
+  <strong>Backup → Apagar conta</strong>: some na hora tudo o que estava guardado na
+  nuvem, e a conta de login junto. Os dados do aparelho continuam. Desinstalar o app
+  <strong>não</strong> apaga a cópia na nuvem.</p>
+
+  <p>Se você não tem mais o app ou o plano, peça a exclusão pelo e-mail do contato abaixo,
+  escrevendo do e-mail da conta Google que usou. A cópia na nuvem e a conta de login são
+  apagadas em até 30 dias, e você recebe a confirmação.</p>
 
   <h2>Contato</h2>
   <p>Dúvidas sobre esta política:
